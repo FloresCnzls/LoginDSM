@@ -9,7 +9,6 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.logindsm.screen.AuthScreen
 import com.example.logindsm.screen.LoginScreen
-import com.example.logindsm.screen.SignupScreen
 import com.example.logindsm.screen.WelcomeScreen
 
 @Composable
@@ -23,9 +22,7 @@ fun AppNavigation(modifier: Modifier = Modifier){
         composable("login"){
             LoginScreen(modifier, navController)
         }
-        composable("signup"){
-            SignupScreen(modifier)
-        }
+
         composable(
             route = "welcome/{email}",
             arguments = listOf(navArgument("email") { type = NavType.StringType })
